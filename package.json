@@ -1,0 +1,17 @@
+{
+  "name": "node-api1-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/more-practice/node-api1-project.git",
+  "author": "Chris Bonifacio <christopher.bonifacio@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
