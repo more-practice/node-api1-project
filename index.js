@@ -43,6 +43,12 @@ server.post("/users", (req, res) => {
   }
 })
 
+server.put("/users/:id", (req, res) => {
+  const newUser = db.updateUser(req.params.id, req.body)
+
+  res.status(200).json(newUser)
+})
+
 server.patch("/users", (req, res) => {
   const patched = db.patchUser(req.body)
 
