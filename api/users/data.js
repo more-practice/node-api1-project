@@ -1,6 +1,7 @@
 module.exports = {
   getUser,
   addUser,
+  updateUser,
   deleteUser,
   patchUser,
 }
@@ -34,6 +35,16 @@ function addUser(user) {
   db.users.push(newUser)
 
   return newUser
+}
+
+function updateUser(id, newData) {
+  const index = getIndex(id)
+
+  console.log()
+
+  db.users[index] = { ...db.users[index], ...newData }
+
+  return db.users[index]
 }
 
 function deleteUser(id) {
